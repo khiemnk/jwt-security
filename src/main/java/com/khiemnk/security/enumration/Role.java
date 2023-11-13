@@ -1,4 +1,4 @@
-package com.khiemnk.security.user;
+package com.khiemnk.security.enumration;
 
 public enum Role {
     USER,
