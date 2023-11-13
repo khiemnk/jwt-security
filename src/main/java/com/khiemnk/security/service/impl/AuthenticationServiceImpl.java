@@ -53,6 +53,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         var jwtToken =  jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
+                .expiredAt(jwtService.getExpiredAt())
                 .build();
     }
 }

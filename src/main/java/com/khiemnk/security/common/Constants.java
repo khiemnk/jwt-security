@@ -8,6 +8,6 @@ public class Constants {
             "/v3/api-docs/**",
             "/swagger-ui/**",
             "/error",
-            "/api/v1/auth/**"
+            "/v1/auth/**"
     };
 }
