@@ -1,5 +1,6 @@
-package com.khiemnk.security.user;
+package com.khiemnk.security.repository;
 
+import com.khiemnk.security.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

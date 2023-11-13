@@ -1,6 +1,6 @@
 package com.khiemnk.security.config;
 
-import com.khiemnk.security.user.UserRepository;
+import com.khiemnk.security.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
