@@ -1,5 +1,6 @@
-package com.khiemnk.security.user;
+package com.khiemnk.security.entity;
 
+import com.khiemnk.security.enumration.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user")
+@Table(name = "user_profile")
 public class User implements UserDetails {
 
     @Id
@@ -66,7 +67,7 @@ public class User implements UserDetails {
     }
 
     @Override
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 }

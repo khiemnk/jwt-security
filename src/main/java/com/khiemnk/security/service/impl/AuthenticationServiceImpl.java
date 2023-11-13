@@ -5,9 +5,9 @@ import com.khiemnk.security.dto.request.AuthenticationRequest;
 import com.khiemnk.security.dto.request.RegisterRequest;
 import com.khiemnk.security.dto.response.AuthenticationResponse;
 import com.khiemnk.security.service.AuthenticationService;
-import com.khiemnk.security.user.Role;
-import com.khiemnk.security.user.User;
-import com.khiemnk.security.user.UserRepository;
+import com.khiemnk.security.enumration.Role;
+import com.khiemnk.security.entity.User;
+import com.khiemnk.security.repository.UserRepository;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -53,6 +53,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         var jwtToken =  jwtService.generateToken(user);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
+                .expiredAt(jwtService.getExpiredAt())
                 .build();
     }
 }
